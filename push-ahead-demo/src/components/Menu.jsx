@@ -1,0 +1,71 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { X } from 'lucide-react';
+
+const Menu = ({ isOpen, onClose, navItems }) => {
+  return (
+    <>
+      {/* Overlay - made fully white */}
+      <div 
+        className={`fixed inset-0 w-screen h-screen bg-white transition-opacity z-50 ${
+          isOpen ? 'opacity-85' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={onClose}
+      />
+      
+      {/* Slide-out menu - made fully white */}
+      <div 
+        className={`fixed top-0 left-0 h-full w-64 bg-white transform transition-transform z-50 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="p-4">
+          <button
+            className="absolute top-4 right-4"
+            onClick={onClose}
+            aria-label="Close menu"
+          >
+            <X className="h-6 w-6 text-gray-900" />
+          </button>
+          
+          <div className="mt-8 space-y-1 text-center">
+            {navItems.map((item) => (
+              <div key={item.name}>
+                <Link
+                  to={item.path}
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600"
+                  onClick={onClose}
+                >
+                  {item.name}
+                </Link>
+                {item.children && (
+                  <div className="pl-4">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.name}
+                        to={child.path}
+                        className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+                        onClick={onClose}
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <Link
+              to="/donate"
+              className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              onClick={onClose}
+            >
+              Donate
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Menu;

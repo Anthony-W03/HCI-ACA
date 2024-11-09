@@ -1,12 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css'
+import Menu from '../components/Menu';
+import { Menu as MenuIcon } from 'lucide-react';
 
 const HomePage = () => {
   console.log('HomePage component rendering');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Add this navigation items array
+  const navItems = [
+    {
+      name: 'Home',
+      path: '/'
+    },
+    {
+      name: 'Programs',
+      path: '/programs'
+    },
+    {
+      name: 'About',
+      path: '/about'
+    },
+    {
+      name: 'Get Involved',
+      path: '/get-involved',
+      children: [
+        {
+          name: 'Volunteer',
+          path: '/volunteer'
+        },
+        {
+          name: 'Partner',
+          path: '/partner'
+        }
+      ]
+    },
+    {
+      name: 'Contact',
+      path: '/contact'
+    }
+  ];
 
   // Handle scroll events for navbar styling
   useEffect(() => {
@@ -17,139 +52,50 @@ const HomePage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navigation items structure
-  const navItems = [
-    {
-      name: 'Programs',
-      path: '/programs',
-      children: [
-        { name: 'After School', path: '/programs/after-school' },
-        { name: 'Summer Camps', path: '/programs/summer-camps' },
-        { name: 'Workshops', path: '/programs/workshops' },
-      ],
-    },
-    { name: 'About Us', path: '/about' },
-    { name: 'Get Involved', path: '/get-involved' },
-    { name: 'For Schools', path: '/schools' },
-    { name: 'Contact', path: '/contact' },
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Navigation */}
       <nav 
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-        }`}
+        className="fixed w-full z-40 bg-white shadow-md"
         role="navigation"
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
+            {/* Menu button - moved to left */}
+            <button
+              className="p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle navigation menu"
+            >
+              <MenuIcon className="h-6 w-6 text-gray-900" />
+            </button>
+
+            {/* Logo - moved to center */}
             <Link 
               to="/" 
               className="flex items-center space-x-2"
               aria-label="Push Ahead Home"
             >
-              {/* <Skateboarding className="h-8 w-8 text-blue-600" /> */}
               <span className="text-xl font-bold text-gray-900">Push Ahead</span>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-4">
-              {navItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  <Link
-                    to={item.path}
-                    className="px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
-                  >
-                    <span className="flex items-center">
-                      {item.name}
-                      {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
-                    </span>
-                  </Link>
-                  {item.children && (
-                    <div className="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          to={child.path}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50"
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              <Link
-                to="/donate"
-                className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-                aria-label="Donate to Push Ahead"
-              >
-                Donate
-              </Link>
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-expanded={isMenuOpen}
-              aria-label="Toggle navigation menu"
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6 text-gray-900" />
-              ) : (
-                <Menu className="h-6 w-6 text-gray-900" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div
-          className={`md:hidden transition-all duration-300 ${
-            isMenuOpen ? 'max-h-screen' : 'max-h-0'
-          } overflow-hidden bg-white`}
-        >
-          <div className="px-4 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              <div key={item.name}>
-                <Link
-                  to={item.path}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {item.children && (
-                  <div className="pl-4">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.name}
-                        to={child.path}
-                        className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {child.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+            {/* Donate button - added to top right */}
             <Link
               to="/donate"
-              className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
               Donate
             </Link>
           </div>
         </div>
+
+        <Menu 
+          isOpen={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+          navItems={navItems}
+        />
       </nav>
 
       {/* Hero Section */}

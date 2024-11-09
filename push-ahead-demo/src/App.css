@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .logo {
@@ -42,8 +42,8 @@
 }
 
 nav {
-  padding: 1rem;
-  background-color: #f0f0f0;
+  padding: 0;
+  background-color: transparent;
 }
 
 nav a {
