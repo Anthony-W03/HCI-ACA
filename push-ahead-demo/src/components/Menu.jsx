@@ -33,7 +33,7 @@ const Menu = ({ isOpen, onClose, navItems }) => {
               <div key={item.name}>
                 <Link
                   to={item.path}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#FBBF24]"
                   onClick={onClose}
                 >
                   {item.name}
@@ -44,7 +44,7 @@ const Menu = ({ isOpen, onClose, navItems }) => {
                       <Link
                         key={child.name}
                         to={child.path}
-                        className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+                        className="block px-3 py-2 text-sm text-gray-600 hover:text-[#FBBF24]"
                         onClick={onClose}
                       >
                         {child.name}
@@ -56,7 +56,7 @@ const Menu = ({ isOpen, onClose, navItems }) => {
             ))}
             <Link
               to="/donate"
-              className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              className="block w-full text-center px-4 py-2 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors"
               onClick={onClose}
             >
               Donate

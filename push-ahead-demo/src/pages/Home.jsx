@@ -84,7 +84,7 @@ const HomePage = () => {
             {/* Donate button - added to top right */}
             <Link
               to="/donate"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors"
             >
               Donate
             </Link>
@@ -116,14 +116,14 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 to="/programs"
-                className="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                className="px-8 py-3 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors"
                 aria-label="View our programs"
               >
                 View Programs
               </Link>
               <Link
                 to="/volunteer"
-                className="px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-md hover:bg-blue-50 transition-colors"
+                className="px-8 py-3 bg-white text-[#FBBF24] border-2 border-[#FBBF24] hover:bg-[#FEF3C7] transition-colors"
                 aria-label="Become a volunteer"
               >
                 Volunteer
