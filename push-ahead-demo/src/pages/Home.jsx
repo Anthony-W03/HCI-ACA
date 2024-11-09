@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css'
 import TopBar from '../components/TopBar';
+import Halfpipe from '../components/Halfpipe';
 
 const HomePage = () => {
   console.log('HomePage component rendering');
@@ -35,25 +36,22 @@ const HomePage = () => {
               creativity, and community in underserved areas.
             </p>
           </div>
-          <div className="halfpipe-container">
-            <div className="halfpipe-content">
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link
-                  to="/programs"
-                  className="px-8 py-3 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors rounded-md"
-                >
-                  View Programs
-                </Link>
-                <Link
-                  to="/volunteer"
-                  className="px-8 py-3 bg-white text-[#FBBF24] border-2 border-[#FBBF24] hover:bg-[#FEF3C7] transition-colors rounded-md"
-                >
-                  Volunteer
-                </Link>
-              </div>
+          <Halfpipe>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                to="/programs"
+                className="px-8 py-3 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors rounded-md"
+              >
+                View Programs
+              </Link>
+              <Link
+                to="/volunteer"
+                className="px-8 py-3 bg-white text-[#FBBF24] border-2 border-[#FBBF24] hover:bg-[#FEF3C7] transition-colors rounded-md"
+              >
+                Volunteer
+              </Link>
             </div>
-            <div className="halfpipe"></div>
-          </div>
+          </Halfpipe>
         </div>
       </section>
     </div>
