@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const About = () => {
-  return (
-    <div>
-    </div>
-  );
-};
-
-export default About;
-=======
 import { useState } from 'react'
 import './About.css'
 import photo2 from '../assets/photos/Photo2.png';
@@ -73,4 +61,3 @@ const About = () => {
   };
   
   export default About;
->>>>>>> e3d6cb2 (added in About Us page and Stories page)

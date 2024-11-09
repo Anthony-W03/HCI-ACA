@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const Stories = () => {
-  return (
-    <div>
-    </div>
-  );
-};
-
-export default Stories;
-=======
 import { useState } from 'react'
 import './About.css'
 import photo5 from '../assets/photos/Photo5.png';
@@ -26,7 +14,7 @@ const Stories = () => {
     ];
   
     return (
-      <div>
+      <div class="content">
 
         <h1 class="title">Success Stories</h1>
         
@@ -48,4 +36,4 @@ const Stories = () => {
   };
   
   export default Stories;
->>>>>>> e3d6cb2 (added in About Us page and Stories page)
+
