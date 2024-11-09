@@ -19,48 +19,51 @@ const Menu = ({ isOpen, onClose, navItems }) => {
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="p-4">
-          <button
-            className="absolute top-4 right-4"
-            onClick={onClose}
-            aria-label="Close menu"
-          >
-            <X className="h-6 w-6 text-gray-900" />
-          </button>
-          
-          <div className="mt-8 space-y-1 text-center">
-            {navItems.map((item) => (
-              <div key={item.name}>
-                <Link
-                  to={item.path}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#FBBF24]"
-                  onClick={onClose}
-                >
-                  {item.name}
-                </Link>
-                {item.children && (
-                  <div className="pl-4">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.name}
-                        to={child.path}
-                        className="block px-3 py-2 text-sm text-gray-600 hover:text-[#FBBF24]"
-                        onClick={onClose}
-                      >
-                        {child.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <Link
-              to="/donate"
-              className="block w-full text-center px-4 py-2 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors"
+        <div className="flex flex-col h-full justify-between">
+          <div className="p-4 flex-grow">
+            <button
+              className="absolute top-4 right-4"
               onClick={onClose}
+              aria-label="Close menu"
             >
-              Donate
-            </Link>
+              <X className="h-6 w-6 text-gray-900" />
+            </button>
+            
+            <div className="mt-8 space-y-4 text-center">
+              {navItems.map((item) => (
+                <div key={item.name}>
+                  <Link
+                    to={item.path}
+                    className="block px-3 py-2 text-xl font-medium text-gray-700 hover:text-[#FBBF24]"
+                    onClick={onClose}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.children && (
+                    <div className="pl-4">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.name}
+                          to={child.path}
+                          className="block px-3 py-2 text-lg text-gray-600 hover:text-[#FBBF24]"
+                          onClick={onClose}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              
+              <Link
+                to="/donate"
+                className="block w-full text-center px-4 py-2 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors text-xl mb-2"
+                onClick={onClose}
+              >
+                Donate
+              </Link>
+            </div>
           </div>
         </div>
       </div>

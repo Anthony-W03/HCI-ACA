@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Currently playing around with the overall look, please excuse its current crudeness
+
 const Halfpipe = ({ className, contentClassName, children }) => {
   return (
     <div className={`halfpipe-container relative h-[200px] ${className || ''}`}>
