@@ -16,26 +16,12 @@ const HomePage = () => {
       path: '/'
     },
     {
-      name: 'Programs',
-      path: '/programs'
+      name: 'Stories',
+      path: '/stories'
     },
     {
       name: 'About',
       path: '/about'
-    },
-    {
-      name: 'Get Involved',
-      path: '/get-involved',
-      children: [
-        {
-          name: 'Volunteer',
-          path: '/volunteer'
-        },
-        {
-          name: 'Partner',
-          path: '/partner'
-        }
-      ]
     },
     {
       name: 'Contact',
