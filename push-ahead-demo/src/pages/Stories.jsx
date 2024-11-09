@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './About.css'
+import TopBar from '../components/TopBar';
 import photo5 from '../assets/photos/Photo5.png';
 import photo8 from '../assets/photos/Photo8.png';
 import photo4 from '../assets/photos/Photo4.png';
 import photo9 from '../assets/photos/Photo9.png';
+import PageLayout from '../components/PageLayout';
 
 const Stories = () => {
     const stories = [
@@ -14,24 +16,24 @@ const Stories = () => {
     ];
   
     return (
-      <div class="content">
-
-        <h1 class="title">Success Stories</h1>
-        
-        <div class="subsection stories2">
-            <div className="stories-grid">
-                {stories.map((story, index) => (
-                <div key={index} className="story">
-                    <h3>{story.name}</h3>
-                    <img src={story.image} alt="About Us Photo 1" />
-                    <p>{story.bio}</p>
-                </div>
-                ))}
-            </div>
+      <PageLayout>
+        <div className="content">
+          <h1 className="title">Success Stories</h1>
+          
+          <div className="subsection stories2">
+              <div className="stories-grid">
+                  {stories.map((story, index) => (
+                  <div key={index} className="story">
+                      <h3>{story.name}</h3>
+                      <img src={story.image} alt="About Us Photo 1" />
+                      <p>{story.bio}</p>
+                  </div>
+                  ))}
+              </div>
+          </div>
+          
         </div>
-        
-  
-      </div>
+      </PageLayout>
     );
   };
   

@@ -12,6 +12,8 @@
     text-align: center;
     color: #0284C7;
     font-size: 4rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
   }
   
   .subsection {
@@ -22,11 +24,16 @@
     font-size: 2.5em;
     color: #FBBF24;
     margin-bottom: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
   }
   
   .subsection p {
     font-size: 1.3rem;
     color: #1E293B;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
   }
   
   .description {
@@ -65,11 +72,15 @@
   .team-member h3 {
     font-size: 1.5em;
     color: #333;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
   }
   
   .team-member h4 {
     font-size: 1.2em;
     color: #777;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
   }
   
   /* Stories Page Specific */
@@ -103,11 +114,16 @@
   .story h3 {
     font-size: 2em;
     color: #1E293B;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
   }
   
   .story p {
     font-size: 1.3rem;
     color: #1E293B;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
   }
   
   .story img {
@@ -115,4 +131,21 @@
     max-width: 100%;
     width: auto;
     padding: 1rem;
+  }
+  
+  .contact-card {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .contact-info {
+    margin-top: 1rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+  }
+  
+  .contact-info p {
+    margin: 0.5rem 0;
   }

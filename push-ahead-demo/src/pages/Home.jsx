@@ -1,33 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css'
-import Menu from '../components/Menu';
-import { Menu as MenuIcon } from 'lucide-react';
+import TopBar from '../components/TopBar';
 
 const HomePage = () => {
   console.log('HomePage component rendering');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
-  // Add this navigation items array
-  const navItems = [
-    {
-      name: 'Home',
-      path: '/'
-    },
-    {
-      name: 'Stories',
-      path: '/stories'
-    },
-    {
-      name: 'About',
-      path: '/about'
-    },
-    {
-      name: 'Contact',
-      path: '/contact'
-    }
-  ];
 
   // Handle scroll events for navbar styling
   useEffect(() => {
@@ -40,50 +18,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav 
-        className="fixed w-full z-40 bg-white shadow-md"
-        role="navigation"
-        aria-label="Main navigation"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Menu button - moved to left */}
-            <button
-              className="p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-expanded={isMenuOpen}
-              aria-label="Toggle navigation menu"
-            >
-              <MenuIcon className="h-6 w-6 text-gray-900" />
-            </button>
-
-            {/* Logo - moved to center */}
-            <Link 
-              to="/" 
-              className="flex items-center space-x-2"
-              aria-label="Push Ahead Home"
-            >
-              <span className="text-xl font-bold text-gray-900">Push Ahead</span>
-            </Link>
-
-            {/* Donate button - added to top right */}
-            <Link
-              to="/donate"
-              className="px-4 py-2 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors"
-            >
-              Donate
-            </Link>
-          </div>
-        </div>
-
-        <Menu 
-          isOpen={isMenuOpen}
-          onClose={() => setIsMenuOpen(false)}
-          navItems={navItems}
-        />
-      </nav>
-
+      <TopBar />
       {/* Hero Section */}
       <section 
         className="pt-16 bg-gradient-to-b from-blue-50 to-white relative"
@@ -91,11 +26,11 @@ const HomePage = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-['Oswald']">
               Empowering Youth Through 
               <span className="text-blue-600"> Skateboarding</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto font-['Oswald'] font-light">
               Combining skateboarding, mindfulness, and entrepreneurship to build confidence, 
               creativity, and community in underserved areas.
             </p>
