@@ -11,9 +11,15 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
+<<<<<<< HEAD
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/stories" element={<Stories/>}/>
+=======
+        {<Route path="/about" element={<About/>}/>}
+        <Route path="/contact" element={<Contact/>}/>
+        { <Route path="/stories" element={<Stories/>}/> }
+>>>>>>> e3d6cb2 (added in About Us page and Stories page)
       </Routes>
     </Router>
   )
