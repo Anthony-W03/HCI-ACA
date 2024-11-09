@@ -1,0 +1,43 @@
+/* Base styles */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #213547;
+}
+
+/* Typography */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Halfpipe styles */
+.halfpipe-container {
+  position: relative;
+  width: 100%;
+  background: #3B82F6;
+  padding: 2rem 1rem 6rem;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.halfpipe-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 120px;
+  background: white;
+  border-radius: 0 0 50% 50%;
+}
+
+.halfpipe-content {
+  position: relative;
+  z-index: 10;
+  margin-top: -33px;
+  margin-bottom: -60px;
+}

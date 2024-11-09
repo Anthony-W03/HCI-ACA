@@ -100,7 +100,7 @@ const HomePage = () => {
 
       {/* Hero Section */}
       <section 
-        className="pt-16 bg-gradient-to-b from-blue-50 to-white"
+        className="pt-16 bg-gradient-to-b from-blue-50 to-white relative"
         aria-label="Hero section"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
@@ -113,22 +113,25 @@ const HomePage = () => {
               Combining skateboarding, mindfulness, and entrepreneurship to build confidence, 
               creativity, and community in underserved areas.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                to="/programs"
-                className="px-8 py-3 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors"
-                aria-label="View our programs"
-              >
-                View Programs
-              </Link>
-              <Link
-                to="/volunteer"
-                className="px-8 py-3 bg-white text-[#FBBF24] border-2 border-[#FBBF24] hover:bg-[#FEF3C7] transition-colors"
-                aria-label="Become a volunteer"
-              >
-                Volunteer
-              </Link>
+          </div>
+          <div className="halfpipe-container">
+            <div className="halfpipe-content">
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link
+                  to="/programs"
+                  className="px-8 py-3 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors rounded-md"
+                >
+                  View Programs
+                </Link>
+                <Link
+                  to="/volunteer"
+                  className="px-8 py-3 bg-white text-[#FBBF24] border-2 border-[#FBBF24] hover:bg-[#FEF3C7] transition-colors rounded-md"
+                >
+                  Volunteer
+                </Link>
+              </div>
             </div>
+            <div className="halfpipe"></div>
           </div>
         </div>
       </section>
