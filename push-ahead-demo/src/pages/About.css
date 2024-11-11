@@ -4,7 +4,7 @@
     padding: 2rem;
     text-align: center;
     background-color: #F8FAFC;
-    font-family: Optima, sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
   }
   
   .title {
@@ -12,8 +12,8 @@
     text-align: center;
     color: #0284C7;
     font-size: 4rem;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-weight: bold;
   }
   
   .subsection {
@@ -24,14 +24,14 @@
     font-size: 2.5em;
     color: #FBBF24;
     margin-bottom: 2rem;
-    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-weight: 400;
   }
   
   .subsection p {
     font-size: 1.3rem;
     color: #1E293B;
-    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-weight: 300;
     line-height: 1.6;
   }
@@ -72,14 +72,14 @@
   .team-member h3 {
     font-size: 1.5em;
     color: #333;
-    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-weight: 500;
   }
   
   .team-member h4 {
     font-size: 1.2em;
     color: #777;
-    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-weight: 400;
   }
   
@@ -114,14 +114,14 @@
   .story h3 {
     font-size: 2em;
     color: #1E293B;
-    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-weight: 400;
   }
   
   .story p {
     font-size: 1.3rem;
     color: #1E293B;
-    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-weight: 300;
     line-height: 1.6;
   }
@@ -142,7 +142,7 @@
   
   .contact-info {
     margin-top: 1rem;
-    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-weight: 300;
   }
   
