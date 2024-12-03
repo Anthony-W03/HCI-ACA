@@ -37,15 +37,15 @@ const HomePage = () => {
             </p>
           </div>
           <Halfpipe>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="py-4 flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                to="/programs"
+                to="/todo"
                 className="px-8 py-3 bg-[#FBBF24] text-white hover:bg-[#F59E0B] transition-colors rounded-md"
               >
                 View Programs
               </Link>
               <Link
-                to="/volunteer"
+                to="/todo"
                 className="px-8 py-3 bg-white text-[#FBBF24] border-2 border-[#FBBF24] hover:bg-[#FEF3C7] transition-colors rounded-md"
               >
                 Volunteer

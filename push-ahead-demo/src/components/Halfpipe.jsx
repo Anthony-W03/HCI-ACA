@@ -1,18 +1,24 @@
 import React from 'react';
 
-//Currently playing around with the overall look, please excuse its current crudeness
 
 const Halfpipe = ({ className, contentClassName, children }) => {
   return (
-    <div className={`halfpipe-container relative h-[200px] ${className || ''}`}>
+    <div className={`halfpipe-container relative h-[200px] py-4 ${className || ''}`}>
       <div className={`halfpipe-content absolute top-0 w-full ${contentClassName || ''}`}>
         {children}
       </div>
-      {/* <div className="halfpipe absolute bottom-0 w-full h-[100px] bg-gray-200"
-           style={{
-             clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 20% 0%, 20% 60%, 80% 60%, 80% 0%)'
-           }}
-      ></div> */}
+      <div className="halfpipe-image absolute bottom-0 w-full">
+        <svg 
+          viewBox="0 0 100 30" 
+          className="w-full h-48"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0 L15,0 L15,0 A25,20 0 0,0 85,0 L85,0 L100,0 L100,30 L0,30 Z"
+            className="fill-current text-[#3B82F6]"
+          />
+        </svg>
+      </div>
     </div>
   );
 };
