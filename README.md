@@ -101,28 +101,28 @@ The site will be available at `http://localhost:5173`
 ## Next Steps
 
 1. **Initial Setup**
-   - [ ] Create project using Vite
-   - [ ] Install and configure Tailwind CSS
-   - [ ] Set up React Router
-   - [ ] Create basic project structure
+   - [x] Create project using Vite
+   - [x] Install and configure Tailwind CSS
+   - [x] Set up React Router
+   - [x] Create basic project structure
 
 2. **Design Phase**
-   - [ ] Create wireframes for each page
-   - [ ] Define color scheme and typography
-   - [ ] Design core components
-   - [ ] Create responsive layouts
+   - [x] Create wireframes for each page
+   - [x] Define color scheme and typography
+   - [x] Design core components
+   - [x] Create responsive layouts
 
 3. **Development Phase**
-   - [ ] Build core components
-   - [ ] Implement page routing
-   - [ ] Add content and images
-   - [ ] Implement responsive design
+   - [x] Build core components
+   - [x] Implement page routing
+   - [x] Add content and images
+   - [x] Implement responsive design
 
 4. **Review & Testing**
-   - [ ] Test on multiple devices
-   - [ ] Check accessibility
-   - [ ] Optimize performance
-   - [ ] Gather feedback
+   - [x] Test on multiple devices
+   - [x] Check accessibility
+   - [x] Optimize performance
+   - [x] Gather feedback
 
 ## Future Considerations
 - Analytics integration
